@@ -1,6 +1,5 @@
 def long_palindrome(s: str) -> str:
     def expend(left: int, right: int) -> str:
-        print(left, right)
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1
             right += 1
@@ -12,7 +11,6 @@ def long_palindrome(s: str) -> str:
     result = ""
     for i in range(len(s) - 1):
         result = max(result, expend(i, i + 1), expend(i, i + 2), key=len)
-
     return result
 
 

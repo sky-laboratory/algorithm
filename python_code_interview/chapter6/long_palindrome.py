@@ -8,7 +8,7 @@ def long_palindrome(s: str) -> str:
     if len(s) < 2 or s == s[::-1]:
         return s
 
-    result = ""
+    result: str = ""
     for i in range(len(s) - 1):
         result = max(result, expend(i, i + 1), expend(i, i + 2), key=len)
     return result

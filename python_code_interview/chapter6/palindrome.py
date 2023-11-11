@@ -33,7 +33,7 @@ def palidrome_list(s: str) -> bool:
 def palidrome_slicing(s: str) -> bool:
     s = s.lower()
     # 정규 표현식 이용하기
-    s = re.sub(r"[^a-z0-9]", "", s)
+    s: str = re.sub(r"[^a-z0-9]", "", s)
 
     return s == s[::-1]
 
